@@ -1,0 +1,18 @@
+{
+  "name": "Async_Queue",
+  "version": "0.0.0",
+  "main": "build/Async_Queue.min.js",
+  "ignore": [
+    "examples",
+    "ext",
+    "lib",
+    "spec",
+    "src",
+    "Gruntfile.js",
+    "package.json",
+    ".gitignore"
+  ],
+  "dependencies": {
+    "es6-promise": "~2.2.0"
+  }
+}
