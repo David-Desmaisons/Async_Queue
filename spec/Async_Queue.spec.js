@@ -9,10 +9,6 @@ describe("Async_Queue shoud be defined", function(){
         expect(v.enQueue).not.toBeUndefined();
     });
 
-    it("should have deQueue function", function() {
-        expect(v.deQueue).not.toBeUndefined();
-    });
-
     afterEach(function() {
        expect(v.running).toBe(false);
     });
