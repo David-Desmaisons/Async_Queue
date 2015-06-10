@@ -1,14 +1,8 @@
 function  Async_Queue(){
-	
-	//begin with a solved promise
-	this.queue =[];
-	this.running=false;
-	// promise= new Promise(function(resolve, reject) {
-	// 	resolve(null);
-	// });;
+    
+	this.queue = [];
+	this.running = false;
 }
-
-
 
 Async_Queue.prototype.enQueue = function(operation){
 
