@@ -41,14 +41,23 @@ module.exports = function(grunt) {
             }
         },
         jasmine : {
-            src : 'src/*.js',
-            options : {
-                specs : 'spec/*.js',
-                vendor: 'bower_components/*/*.js',
-                template : require('grunt-template-jasmine-istanbul'),
-                templateOptions: {
-                    coverage: 'reports/coverage.json',
-                    report: 'reports/coverage'
+            sync:{
+                src : 'src/*.js',
+                options : {
+                    specs : 'spec/Async_Queue.spec.js',
+                    vendor: 'bower_components/es6-promise/*.js',
+                    template : require('grunt-template-jasmine-istanbul'),
+                    templateOptions: {
+                        coverage: 'reports/coverage.json',
+                        report: 'reports/coverage'
+                    }
+                }
+            },
+
+            async:{
+                options : {
+                    specs : 'spec/Async_Queue_require.spec.js',
+                    vendor: ['bower_components/es6-promise/*.js','bower_components/requirejs/*.js','spec/require.grunt.config.js']
                 }
             }
         }
