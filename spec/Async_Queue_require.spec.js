@@ -13,9 +13,9 @@ describe("Async_Queue shoud be defined with require", function(){
        injector.remove();
     });
 
-    it("should exist", function(done) {
-        injector.require(["Async_Queue"],function(qd){
-            var v = new qd.Async_Queue();
+    it("enQueue should exist", function(done) {
+        injector.require(["Async_Queue"],function(Async_Queue){
+            var v = new Async_Queue();
             expect(v.enQueue).not.toBeUndefined();
             done();
         })

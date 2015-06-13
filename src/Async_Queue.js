@@ -2,13 +2,13 @@
     //AMD
     if (typeof define === "function" && define.amd) {
         define(function(require, exports, module) {
-            factory(exports);
+            return factory();
         });
     //normal script tag
     } else {
-        factory(window);
+        window.Async_Queue = factory();
     }
-}(function(exports) {
+}(function() {
 
     function  Async_Queue(){
     
@@ -46,6 +46,6 @@
         deQueue(this);
     };
 
-    exports.Async_Queue = Async_Queue;
+    return Async_Queue;
 }));
 
